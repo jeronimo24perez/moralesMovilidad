@@ -1,0 +1,193 @@
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('./styles/banner.css');
+@import url('./styles/bars.css');
+@import url('./styles/layout.css');
+@import url('./styles/nav.css');
+@import url('./styles/stats.css');
+
+
+:root {
+    --bg: #09090a;
+    --bg2: #111114;
+    --bg3: #181820;
+    --text: #eee8df;
+    --muted: #6e6b65;
+    --accent: #f0a500;
+    --danger: #e63946;
+    --teal: #2ec4b6;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.78;
+    overflow-x: hidden;
+}
+
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    z-index: 300;
+    width: 0%;
+    transition: width 0.1s;
+}
+
+
+/* IMG */
+.img-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.img-frame img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+    filter: brightness(0.9);
+}
+
+.img-frame:hover img {
+    transform: scale(1.04);
+}
+
+.img-cap {
+    font-size: 0.71rem;
+    color: var(--muted);
+    margin-top: 0.8rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+/* INFO BOX */
+.ibox {
+    background: rgba(46, 196, 182, 0.07);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 3px 3px 0;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+}
+
+.ibox-head {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+}
+
+.ibox p {
+    font-size: 0.93rem;
+    color: rgba(238, 232, 223, 0.78);
+    line-height: 1.72;
+}
+
+/* DANGER TAG */
+.dtag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(230, 57, 70, 0.12);
+    border: 1px solid rgba(230, 57, 70, 0.28);
+    color: var(--danger);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.28rem 0.75rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* TESTIMONY */
+.tcard {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 2rem 2.25rem;
+    position: relative;
+}
+
+.tcard::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.3rem;
+    left: 1.8rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 5.5rem;
+    color: var(--accent);
+    opacity: 0.22;
+    line-height: 1;
+}
+
+.ttext {
+    font-style: italic;
+    font-size: 1.03rem;
+    line-height: 1.82;
+    color: rgba(238, 232, 223, 0.83);
+}
+
+.tperson {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+}
+
+.tavatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.82rem;
+    color: var(--bg);
+    flex-shrink: 0;
+}
+
+.tname {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.trole {
+    font-size: 0.73rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+}
+
+.tgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    margin-top: 3rem;
+}
+
