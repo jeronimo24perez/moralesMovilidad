@@ -1,0 +1,131 @@
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 4rem 6rem;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    transform: scale(1.06);
+    transition: transform 10s ease;
+}
+
+.hero-overlay {
+    position: absolute;    inset: 0;
+    
+    background: linear-gradient(to top, rgba(9, 9, 10, 0.98) 0%, rgba(9, 9, 10, 0.55) 50%, rgba(9, 9, 10, 0.25) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.eyebrow {
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.eyebrow::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3.5rem, 8.5vw, 8rem);
+    line-height: 0.93;
+    max-width: 950px;
+    margin-top: 3rem;
+}
+
+.hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+}
+
+.hero-sub {
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: rgba(238, 232, 223, 0.68);
+    max-width: 560px;
+    line-height: 1.65;
+}
+
+.hero-kpis {
+    margin-top: 3.5rem;
+    display: flex;
+    gap: 3.5rem;
+}
+
+.kpi-n {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.9rem;
+    color: var(--accent);
+    line-height: 1;
+    display: block;
+}
+
+.kpi-l {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.3rem;
+    display: block;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--muted);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 56px;
+    background: linear-gradient(to bottom, transparent, var(--accent));
+    animation: scl 2s ease-in-out infinite;
+}
+
+@keyframes scl {
+
+    0%,
+    100% {
+        transform: scaleY(0.2);
+        transform-origin: top
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top
+    }
+}

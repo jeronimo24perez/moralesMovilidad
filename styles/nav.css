@@ -1,0 +1,79 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: rgba(9, 9, 10, 0.53);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+
+}
+
+.nav-brand {
+    font-family: "Black Ops One", serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+@media(max-width:900px) {
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .stats-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tgrid,
+    .pgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sfgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 0 1.5rem 4rem;
+    }
+
+    .pcard.wide {
+        grid-column: span 1;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+    }
+}
