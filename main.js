@@ -1,5 +1,13 @@
 window.addEventListener('load', () => {
-
+  const stages = document.querySelectorAll('[data-stage]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.25 });
+  stages.forEach(s => io.observe(s));
   // Barra de progreso 
   const progressBar = document.getElementById('reading-progress');
 
