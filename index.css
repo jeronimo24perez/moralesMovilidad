@@ -17,6 +17,15 @@
     --danger: #e63946;
     --teal: #2ec4b6;
     --border: rgba(255, 255, 255, 0.08);
+    --paper:#111111;
+    --ink:#F5EAC8;
+    --copper:#F2C14E;
+    --amber:#FFD23F;
+    --dusk:#E0A80C;
+    --teal:#1a1a1a;
+    --cyan:#FFE066;
+    --void:#000000;
+    --paper-ink:#CBB98A;
 }
 
 *,
